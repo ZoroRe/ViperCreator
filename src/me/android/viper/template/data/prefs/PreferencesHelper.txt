@@ -1,0 +1,4 @@
+package ${data}.prefs;
+
+public interface PreferencesHelper{
+}

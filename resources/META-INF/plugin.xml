@@ -1,0 +1,42 @@
+<idea-plugin version="2">
+    <id>me.luguanquan.viper.pro</id>
+    <name>ViperCreator</name>
+    <version>1.0</version>
+    <vendor email="guanquan.lu@gmail.com" url="http://www.luguanquan.net">LuGuanqQuan</vendor>
+
+    <description><![CDATA[
+      Generator Viper code.</br>
+      Containers di, data, base, viper fragment, viper activity.<br>
+      If your di, data is not in root package, you should change yourself and rebuild it.<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        Just do it.
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="me.android.viper.pro"
+                class="me.android.viper.ViperCreateAction"
+                text="ViperCreator"
+                icon="/fileTypes/javaClass.png"
+                description="生成 基于 dagger2 的 Viper 框架代码">
+            <add-to-group group-id="NewGroup" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>

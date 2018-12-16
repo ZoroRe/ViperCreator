@@ -1,0 +1,10 @@
+package ${package}.${module}.interactor;
+
+import ${package}.${module}.presenter.${Module}Presenter;
+import ${package}.${module}.interactor.${Module}Interactor;
+import ${data}.DataManager;
+import ${base}.viper.BaseInteractor;
+
+
+public class ${Module}Interactor extends BaseInteractor<${Module}Presenter, DataManager> {
+}

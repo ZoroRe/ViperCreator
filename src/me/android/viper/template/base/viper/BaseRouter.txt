@@ -1,0 +1,4 @@
+package ${base}.viper;
+
+public abstract class BaseRouter implements IBaseRouter{
+}

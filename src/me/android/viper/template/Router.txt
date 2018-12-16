@@ -1,0 +1,6 @@
+package ${package}.${module}.router;
+
+import ${base}.viper.BaseRouter;
+
+public class ${Module}Router extends BaseRouter {
+}

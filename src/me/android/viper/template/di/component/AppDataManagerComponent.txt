@@ -1,0 +1,18 @@
+package ${di}.component;
+
+
+import ${data}.AppDataManager;
+import ${data}.AppDataManagerModule;
+import ${di_scope}.DataScope;
+
+import dagger.Subcomponent;
+
+@DataScope
+@Subcomponent(modules = AppDataManagerModule.class)
+public interface AppDataManagerComponent {
+    void inject(AppDataManager dataManager);
+    @Subcomponent.Builder
+    interface Builder{
+        AppDataManagerComponent build();
+    }
+}

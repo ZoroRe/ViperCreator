@@ -1,0 +1,51 @@
+package ${package}.${module};
+
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import ${data}.DataManager;
+import ${base}.DiFragment;
+import ${package}.${module}.interactor.${Module}Interactor;
+import ${package}.${module}.presenter.${Module}Presenter;
+import ${package}.${module}.router.${Module}Router;
+import ${package}.${module}.view.${Module}ViewModel;
+import ${base}.viper.Assembler;
+import ${root}.R;
+
+import javax.inject.Inject;
+
+public class ${Module}Fragment extends DiFragment{
+
+    @Inject
+    ${Module}Presenter presenter;
+    @Inject
+    ${Module}Router router;
+    @Inject
+    ${Module}Interactor interactor;
+    @Inject
+    ${Module}ViewModel viewModel;
+    @Inject
+    DataManager dataManager;
+
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View content = inflater.inflate(R.layout.${module}_fragment, container, false);
+        return content;
+    }
+
+
+    @Nullable
+    @Override
+    protected Assembler.Builder provideAssemblerBuilder() {
+        return new Assembler.Builder()
+                .view(viewModel)
+                .router(router)
+                .presenter(presenter)
+                .interactor(interactor)
+                .dataManager(dataManager);
+    }
+}

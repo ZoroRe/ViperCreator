@@ -1,0 +1,4 @@
+package ${data}.db;
+
+public interface DbHelper{
+}

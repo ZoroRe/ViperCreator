@@ -1,0 +1,10 @@
+package ${package}.${module}.presenter;
+
+import ${base}.viper.BasePresenter;
+import ${package}.${module}.interactor.${Module}Interactor;
+import ${package}.${module}.router.${Module}Router;
+import ${package}.${module}.view.${Module}ViewModel;
+import ${base}.viper.BasePresenter;
+
+public class ${Module}Presenter extends BasePresenter<${Module}ViewModel, ${Module}Router, ${Module}Interactor> {
+}

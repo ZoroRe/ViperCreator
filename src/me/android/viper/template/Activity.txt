@@ -1,0 +1,45 @@
+package ${package}.${module};
+
+import android.os.Bundle;
+
+import ${data}.DataManager;
+import ${base}.DiActivity;
+import ${package}.${module}.interactor.${Module}Interactor;
+import ${package}.${module}.presenter.${Module}Presenter;
+import ${package}.${module}.router.${Module}Router;
+import ${package}.${module}.view.${Module}ViewModel;
+import ${base}.viper.Assembler;
+import ${root}.R;
+
+import javax.inject.Inject;
+
+public class ${Module}Activity extends DiActivity{
+
+    @Inject
+    ${Module}Presenter presenter;
+    @Inject
+    ${Module}Router router;
+    @Inject
+    ${Module}Interactor interactor;
+    @Inject
+    ${Module}ViewModel viewModel;
+    @Inject
+    DataManager dataManager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.${module}_activity);
+    }
+
+
+    @Override
+    protected Assembler.Builder provideAssemblerBuilder() {
+        return new Assembler.Builder()
+                .view(viewModel)
+                .router(router)
+                .presenter(presenter)
+                .interactor(interactor)
+                .dataManager(dataManager);
+    }
+}

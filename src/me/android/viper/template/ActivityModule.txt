@@ -1,0 +1,42 @@
+package ${package}.${module};
+
+import android.arch.lifecycle.ViewModelProviders;
+
+import ${di_scope}.ActivityScope;
+import ${base}.viper.Assembler;
+import ${package}.${module}.interactor.${Module}Interactor;
+import ${package}.${module}.presenter.${Module}Presenter;
+import ${package}.${module}.router.${Module}Router;
+import ${package}.${module}.view.${Module}ViewModel;
+
+import dagger.Module;
+import dagger.Provides;
+
+@Module
+public class ${Module}ActivityModule {
+
+    @ActivityScope
+    @Provides
+    ${Module}ViewModel provideViewModel(${Module}Activity activity) {
+        return ViewModelProviders.of(activity).get(${Module}ViewModel.class);
+    }
+
+    @ActivityScope
+    @Provides
+    ${Module}Interactor provideInteractor() {
+        return new ${Module}Interactor();
+    }
+
+    @ActivityScope
+    @Provides
+    ${Module}Router provideRouter() {
+        return new ${Module}Router();
+    }
+
+    @ActivityScope
+    @Provides
+    ${Module}Presenter providePresenter() {
+        return new ${Module}Presenter();
+    }
+
+}

@@ -1,0 +1,10 @@
+package ${package}.${module}.view;
+
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
+
+import ${base}.viper.BaseViewModel;
+import ${package}.${module}.presenter.${Module}Presenter;
+
+public class ${Module}ViewModel extends BaseViewModel<${Module}Presenter> {
+}

@@ -1,0 +1,10 @@
+package ${data};
+
+
+import ${data}.db.DbHelper;
+import ${data}.prefs.PreferencesHelper;
+import ${data}.remote.ApiHelper;
+
+public interface DataManager extends DbHelper, PreferencesHelper, ApiHelper {
+
+}

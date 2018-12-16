@@ -1,0 +1,21 @@
+package ${package}.di.component;
+
+import javax.inject.Singleton;
+import dagger.Component;
+import dagger.android.AndroidInjectionModule;
+import dagger.android.support.AndroidSupportInjectionModule;
+import ${di}.module.AppModule;
+import ${di}.module.NetModule;
+import ${di}.module.SubModule;
+import ${di}.builder.ActivityBuilder;
+
+import dagger.android.AndroidInjectionModule;
+import dagger.android.support.AndroidSupportInjectionModule;
+
+@Singleton
+@Component(modules = {AppModule.class, NetModule.class, SubModule.class, ActivityBuilder.class, AndroidSupportInjectionModule.class,AndroidInjectionModule.class})
+public interface AppComponent {
+  void inject(Application app);
+
+  AppDataManagerComponent.Builder appDataManagerComponent();
+}

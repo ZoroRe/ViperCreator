@@ -1,0 +1,4 @@
+package ${data}.remote;
+
+public interface ApiHelper {
+}

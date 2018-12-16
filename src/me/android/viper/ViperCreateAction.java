@@ -80,17 +80,17 @@ public class ViperCreateAction extends AnAction {
 
     /**
      * =========== start of item need to replace ============
-     * ${root} 项目根包名
-     * ${package} 当前创建的文件包名
-     * ${data}  DataManager 所在包名
-     * ${base} viper 的 base 包名
-     * ${module} 当前模块名，小写开头
-     * ${Module} 当前模块名，大写开头
-     * ${di}  dagger 配置包名
-     * ${di_builder}
-     * ${di_component}
-     * ${di_module}
-     * ${di_scope}
+     * ${root} root package name
+     * ${package} current package
+     * ${data}  package name of DataManager
+     * ${base} package name of Base Viper
+     * ${module} new module name with lowcase
+     * ${Module} new module name with capitalize
+     * ${di}  package of di
+     * ${di_builder} package of builder in di
+     * ${di_component} package of component in di
+     * ${di_module} package of module in di
+     * ${di_scope} package of scope in di
      * =========== end of item need to replace ============
      *
      * @param content
